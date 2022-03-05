@@ -218,9 +218,9 @@ GameObject:
   - component: {fileID: 562636392}
   - component: {fileID: 562636391}
   - component: {fileID: 562636390}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: plane
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,7 +259,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562636389}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -331,7 +331,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562636389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0149, y: -1.762, z: 0}
+  m_LocalPosition: {x: 0, y: -1.39, z: 0}
   m_LocalScale: {x: 42.50325, y: 0.33178443, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -369,21 +369,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5edec7a9c58da649b545c6896c707cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 650
+  accCap: 20
+  jumpPower: 5.5
+  maxJumpTime: 0.35
+  isGrounded: 0
+  isJumping: 0
+  A_Coef: 0.04
+  gCoeffs:
+    G_GravCoef: 1
+    J_GravCoef: 0.85
   gCheck:
-    pos: {x: 0, y: 0, z: 0}
-    scale: {x: 1, y: 1, z: 1}
+    pos: {x: 0, y: -0.505, z: 0}
+    scale: {x: 1, y: 0.05, z: 0}
     mask:
       serializedVersion: 2
-      m_Bits: 5
-  speed: 0
-  airSpeed: 0
-  extraJumps: 0
-  jumpForce: 0
-  jumpTime: 0
-  gravScale: 5
-  groundDrag: 5
-  airDrag: 1
-  RespawnPoint: {x: 0, y: 0, z: 0}
+      m_Bits: 8
 --- !u!61 &802528487
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -430,7 +431,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!212 &802528489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802528485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.512, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
